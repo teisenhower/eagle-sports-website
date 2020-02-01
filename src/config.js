@@ -1,0 +1,97 @@
+const config = {
+ foo: "bar",
+ us: [
+  {
+   title: "LOCATION",
+   description: "Eagle Sports is conveniently located in sunny Winnetka California, and is accessible by cities all around."
+  },
+  {
+   title: "YOU",
+   description: "It’s all about the customer in our book. We are not happy until you are. We respond to our emails within 12 hours. We take all inquires seriously and try our best to comply with all issues and or questions as fast as possible"
+  },
+  {
+   title: "DESIGN",
+   description: "No design is too difficult for us. Send us an email and we be sure to evaluate your design and guide you through the process. We pay attention to the tiniest amount of detail to ensure both quality and happiness as a customer."
+  },
+  {
+   title: "TURN AROUND",
+   description: "Eagle Sports & Awards prides itself on having the quickest turnarounds, with no extra charge & in most cases 3 days."
+  },
+  {
+   title: "CONNECT",
+   description: "We love to hear feedback. We also love giving advice. Send us an email and we will be more than glad to assist you with your order."
+  },
+ ],
+ clients: [
+  {
+   title: "BOYS AND GIRLS CLUBS",
+   names: [
+    "Santa Monica",
+    "Mar Vista",
+    "Venice",
+    "East LA",
+    "Tustin",
+    "Santa Clarita",
+   ]
+  },
+  {
+   title: "CITIES",
+   names: [
+     "Culver City",
+     "Paramount",
+     "West Hollywood",
+     "Westchester",
+     "Van Nuys",
+     "Moorpark",
+   ]
+  },
+  {
+   title: "SCHOOLS",
+   names: [
+    "LA Ballona",
+    "Lin Howe",
+    "Farragut",
+    "Beverly Hills",
+    "Temple Akiba",
+    "Pacific Palisades"
+   ]
+  },
+  {
+   title: "NON-PROFIT",
+   names: [
+    "Lupus Foundation",
+    "Hearts For Hope",
+    "Resnick Child Life Center"
+   ]
+  },
+  {
+   title: "OTHERS",
+   names: [
+    "Honeykettle Chicken",
+    "Factor's Famous Deli",
+    "Playboy",
+    "Beverly Hills Tennis",
+    "Paramount Studios"
+   ]
+  },
+ ],
+ brands: [
+  {
+   title: "Alphabroder",
+  },
+  {
+   title: "Sanmar",
+  },
+  {
+   title: "A4",
+  },
+  {
+   title: "Hats and Bags",
+  },
+  {
+   title: "Ottocap",
+  },
+ ]
+}
+
+export default config;

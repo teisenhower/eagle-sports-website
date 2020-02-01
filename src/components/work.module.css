@@ -1,0 +1,48 @@
+.work{
+ position: relative;
+ height: 100%;
+}
+.blue{
+ height: 100%;
+ z-index: -1;
+ background: var(--blue);
+ width: 100%;
+ transform: skew(0deg, -3deg);
+ position: absolute;
+}
+.container{
+ max-width: 75%;
+ margin: 0 auto;
+ padding-top: 100px;
+}
+.workHeader{
+ float: right;
+ max-width: max-content;
+ color: rgb(var(--darkBlue));
+ font-size: 1.5rem;
+ letter-spacing: 2px;
+ font-weight: 800;
+}
+.workDescr{
+ letter-spacing: 2px;
+ line-height: 20px;
+ text-align: end;
+ padding: 15px 0 50px 0;
+ margin: 0;
+}
+
+
+@media(max-width: 1600px){
+ .blue{
+  transform: skew(0deg, -6deg);
+ }
+ .workHeader{
+  font-size: 1.2rem;
+ }
+ .workDescr{
+  width: 100%;
+ }
+ .container{
+  max-width: 90%;
+ }
+}

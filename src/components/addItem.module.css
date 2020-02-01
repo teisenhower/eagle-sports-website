@@ -1,0 +1,27 @@
+.addItem{
+ width: 50%;
+ padding-bottom: 3rem
+}
+.itemTitle{
+ color: rgb(var(--darkBlue));
+ font-size: 1.5rem;
+}
+.itemDesc{
+ padding-bottom: 1.5rem;
+}
+
+@media(min-width: 1200px) and (max-width: 1600px){
+ .addItem{
+
+ }
+}
+@media(min-width: 768px) and (max-width: 1200px){
+ .addItem{
+  width: 100%;
+ }
+}
+@media(max-width: 768px){
+ .addItem{
+  width: 100%;
+ }
+}
