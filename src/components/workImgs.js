@@ -46,7 +46,7 @@ class WorkImgs extends React.Component{
      </div>
     <div id="workImages"className={styles.imgGrid}>
     {images.map(image => (
-    <picture>
+    <picture className={styles.blueCover}>
      <source className="lazyLoad" srcSet='' data-info={image.srcWebp} type="image/webp" />
      <source className="lazyLoad" srcSet='' data-info={image.srcJpg} type="image/jpeg" />
      <img src={image.srcJpg} className={"lazyLoad " + styles.imgBlock} alt="Eagle Sports and Awards" onClick={() => this.showShadow(image)}/>

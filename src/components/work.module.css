@@ -5,7 +5,7 @@
 .blue{
  height: 100%;
  z-index: -1;
- background: var(--blue);
+ background: rgb(var(--blue));
  width: 100%;
  transform: skew(0deg, -3deg);
  position: absolute;

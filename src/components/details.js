@@ -28,7 +28,7 @@ class Category extends React.Component{
   } else if (category === 'brands'){ 
    return (
     <div key={data.title} className={styles.catItem}>
-     <div className={'lightGrey ' + styles.catTitle}>{data.title}</div>
+     <a target="_blank" rel="noopener noreferrer" href={data.url} className={'lightGrey ' + styles.catTitle}>{data.title}</a>
     </div>
   )};
  } 

@@ -9,6 +9,25 @@
  height: 200px;
  width: 100%;
  cursor: pointer;
+ opacity: .5;
+ transition: all .3s ease-in-out;
+}
+.imgBlock:hover{
+ transform: scale(1.2);
+ opacity: 1;
+}
+picture{
+ overflow: hidden;
+}
+picture:after{
+ height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
+ content: '';
+ background: transparent;
+ position: absolute;
+ z-index: -1;
 }
 .shadowImage {
  object-fit: contain;
@@ -44,5 +63,11 @@
   object-fit: contain;
   width: 100%;
   height: auto;
+ }
+ .imgBlock{
+  opacity: 1;
+ }
+ .imgBlock:hover{
+  transform: scale(1.0);
  }
 }

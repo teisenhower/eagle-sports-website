@@ -1,0 +1,44 @@
+.contactForm{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+}
+.contactItem{
+ display: flex;
+ flex-direction: column;
+}
+.contactItem:last-child{
+ align-items: flex-end;
+}
+.contactTitle{
+ font-size: 1.5rem;
+ letter-spacing: 2px;
+ display: flex;
+ flex-direction: column;
+ width: max-content;
+}
+.contactItem:last-child > .contactTitle:first-child{
+ align-items: flex-end;
+}
+.contactInfo{
+ padding-top: .75rem;
+ font-size: 1.2rem;
+ letter-spacing: 2px;
+}
+@media(min-width: 1200px) and (max-width: 1600px){
+
+}
+@media(min-width: 992px) and (max-width: 1200px){
+
+}
+@media(max-width: 992px){
+ .contactItem{
+  align-items: flex-end;
+ }
+ .contactItem > .contactTitle:first-child{
+  align-items: flex-end;
+ }
+ .contactForm{
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+ }
+}

@@ -78,18 +78,23 @@ const config = {
  brands: [
   {
    title: "Alphabroder",
+   url: "https://www.alphabroder.com/"
   },
   {
    title: "Sanmar",
+   url: "https://www.sanmar.com/"
   },
   {
    title: "A4",
+   url: "https://www.a4.com/"
   },
   {
-   title: "Hats and Bags",
+   title: "NissinCap",
+   url: "https://www.nissincap.com/"
   },
   {
    title: "Ottocap",
+   url: "https://ottocap.com/"
   },
  ]
 }
