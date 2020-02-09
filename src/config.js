@@ -1,9 +1,13 @@
 const config = {
- foo: "bar",
+  about: [
+    "Vietnam Veteran owned",
+    "Working in public recreation for more than 20 years and raising children, Elliot had first hand understanding of the needs of recreation departs and schools, including PTAs.  So when he retired after over 20 years ago, he decided to provide a different service to the communities around him.",
+    "As a screen printer, embroidery, trophies &awards and promotional item company in the San Fernando Valley, we provide services to the greater LA area.  Elliot has insight into the needs of groups both large and small.  We have a graphic designer on our staff who can assist with getting your custom design on your chosen piece of apparel, whether T-shirt, sweatshirt, polo shirt, hats, etc. whether screen printed or embroidered.  All of screen printing and embroidery is done locally in the Los Angeles area."
+  ],
  us: [
   {
-   title: "LOCATION",
-   description: "Eagle Sports is conveniently located in sunny Winnetka California, and is accessible by cities all around."
+    title: "LOCATION",
+    description: "Eagle Sports is conveniently located in sunny Winnetka California, and is accessible by cities all around."
   },
   {
    title: "YOU",
@@ -24,9 +28,9 @@ const config = {
  ],
  clients: [
   {
-   title: "BOYS AND GIRLS CLUBS",
-   names: [
-    "Santa Monica",
+    title: "BOYS AND GIRLS CLUBS",
+    names: [
+      "Santa Monica",
     "Mar Vista",
     "Venice",
     "East LA",

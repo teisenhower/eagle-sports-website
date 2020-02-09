@@ -21,6 +21,7 @@
  font-size: 1.5rem;
  letter-spacing: 2px;
  font-weight: 800;
+ /* animation: dissolve .5s ease-in-out; */
 }
 
 @media(max-width: 1600px){
@@ -34,3 +35,14 @@
   max-width: 90%;
  }
 }
+
+/* @keyframes dissolve {
+    0% {
+      opacity: 0;
+      padding-top: 20px;
+    }
+    100% {
+      opacity: 1;
+      padding-top: 0px;
+    }
+  } */

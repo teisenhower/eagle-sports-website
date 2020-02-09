@@ -1,28 +1,31 @@
 .contactForm{
+    margin: 0 auto;
  display: grid;
- grid-template-columns: repeat(3,1fr);
+ grid-template-columns: 1fr;
+ grid-gap: 75px;
+ width: 50%;
 }
 .contactItem{
  display: flex;
  flex-direction: column;
 }
 .contactItem:last-child{
- align-items: flex-end;
+ /* align-items: flex-end; */
 }
 .contactTitle{
- font-size: 1.5rem;
- letter-spacing: 2px;
+font-size: 1.25rem;
+ letter-spacing: 1px;
  display: flex;
  flex-direction: column;
  width: max-content;
 }
 .contactItem:last-child > .contactTitle:first-child{
- align-items: flex-end;
+ /* align-items: flex-end; */
 }
 .contactInfo{
- padding-top: .75rem;
- font-size: 1.2rem;
+ font-size: 1.1rem;
  letter-spacing: 2px;
+ width: max-content;
 }
 @media(min-width: 1200px) and (max-width: 1600px){
 

@@ -11,14 +11,14 @@ class Category extends React.Component{
    return (
      <div key={data.title} className={styles.catItem}>
       <div className={'orange medium ' + styles.catTitle}>{data.title}</div>
-      <p className={'lightGrey ' + styles.catDesc}>{data.description}</p>
+      <p className={'medGrey ' + styles.catDesc}>{data.description}</p>
      </div>
    )
   } else if (category === 'clients'){ 
    return (
     <div key={data.title} className={styles.catItem}>
      <div className={'orange medium ' + styles.catTitle}>{data.title}</div>
-     <ul className="lightGrey">
+     <ul className="medGrey">
       {data.names.map(name => (
         <li key={name}>{name}</li>
       ))}
@@ -28,7 +28,7 @@ class Category extends React.Component{
   } else if (category === 'brands'){ 
    return (
     <div key={data.title} className={styles.catItem}>
-     <a target="_blank" rel="noopener noreferrer" href={data.url} className={'lightGrey ' + styles.catTitle}>{data.title}</a>
+     <a target="_blank" rel="noopener noreferrer" href={data.url} className={'medGrey ' + styles.catTitle}>{data.title}</a>
     </div>
   )};
  } 

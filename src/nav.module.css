@@ -1,0 +1,151 @@
+nav {
+  background: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1010;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(var(--lightGrey));
+  box-shadow: 0 0 15px rgba(var(--blue), 0.25);
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+}
+nav > ul > li {
+  display: inline;
+  padding: 0 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+nav > ul > li:hover {
+  color: rgba(var(--orange));
+  transition: all 0.15s ease;
+}
+#navImage {
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+}
+.toggle {
+  display: none;
+}
+.xicon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  position: absolute;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  float: right;
+  overflow: hidden;
+}
+.xicon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: rgba(var(--orange));
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+  top: -50%;
+}
+.xicon span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.xicon span:nth-child(1) {
+  transform: rotate(45deg);
+  left: -100%;
+}
+.xicon span:nth-child(2) {
+  transform: rotate(-45deg);
+  left: 100%;
+}
+.hamburger {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  float: right;
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: rgba(var(--orange));
+  border-radius: 2px;
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+  left: 0;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+  transition-delay: 0.1s;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+  transition-delay: 0.15s;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+  transition-delay: 0.2s;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 0;
+  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  max-width: 75%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: block;
+  }
+  .section {
+    display: block;
+  }
+  .section > li:first-of-type {
+    padding-top: 20px;
+  }
+  .toggle {
+    right: 10px;
+    float: right;
+    position: relative;
+    display: block;
+    top: 5px;
+  }
+  .section {
+    clear: both;
+    padding: 0 0 0 50px;
+    margin: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    height: 0px;
+  }
+  .hamburger {
+    text-align: center;
+    float: right;
+    display: block;
+  }
+  nav > ul > li {
+    display: block;
+    text-align: left;
+    padding-right: 0;
+    opacity: 1;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+    margin-left: -40px;
+  }
+}

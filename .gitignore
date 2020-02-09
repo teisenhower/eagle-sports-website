@@ -13,6 +13,8 @@
 
 #images
 #/src/imgs
+amplify.yml
+pw.txt
 
 # misc
 .DS_Store

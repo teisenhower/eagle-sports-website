@@ -5,7 +5,7 @@ import WorkImgs from './workImgs'
 class Work extends React.Component{
  render(){
   return (
-   <section className={styles.work}>
+   <section id="ourWork" className={styles.work}>
     <div className={styles.blue}></div>
     <div className={styles.container}>
      <div className={styles.workHeader}>OUR WORK <div className="hr float_right"></div></div>
