@@ -20,7 +20,10 @@ class Header extends React.Component {
         <div className={styles.imageOverlay}></div>
         <picture>
           <source srcSet={headerImagewebp} type="image/webp" />
-          <img alt="Eagle Sports and Awards" srcSet={headerImagejpg} />
+          <img
+            alt="Eagle Sports and Awards - Screen Printing machines"
+            srcSet={headerImagejpg}
+          />
         </picture>
         {/* <img src={headerImage} /> */}
         <div className={styles.headerInfo}>

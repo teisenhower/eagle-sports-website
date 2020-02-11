@@ -8,22 +8,40 @@ class WorkImgs extends React.Component {
       visible: "hidden",
       src: ""
     };
+    let onIntersection = entries => {
+      const images = window.document.querySelectorAll("source, img");
+      if (entries[0].intersectionRatio > 0) {
+        this.observer.unobserve(this.imageRef.current);
+        images.forEach(image => {
+          preloadImage(image);
+        });
+      }
+    };
+    this.imageRef = React.createRef();
+    this.observer = new IntersectionObserver(onIntersection, {
+      root: null,
+      rootMargin: "50px",
+      threshold: 0
+    });
+
+    let preloadImage = image => {
+      if (image.dataset && image.dataset.src) {
+        image.src = image.dataset.src;
+      }
+      if (image.dataset && image.dataset.srcset) {
+        image.srcset = image.dataset.srcset;
+      }
+    };
   }
 
   componentDidMount() {
-    // Lifecyle method
-    const images = document.querySelectorAll("source.lazyLoad");
-    const timer = setInterval(() => {
-      console.log("load images");
-      images.forEach(image => (image.src = image.dataset.info));
-      clearInterval(timer);
-    }, 2000);
+    this.observer.observe(this.imageRef.current);
   }
+
   showShadow(image) {
     this.setState({
       src: image
     });
-    console.log(this.state.src["srcJpg"]);
     this.state.visible === "hidden"
       ? this.setState({ visible: "show" })
       : this.setState({ visible: "hidden" });
@@ -38,7 +56,8 @@ class WorkImgs extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div ref={this.imageRef}>
+        <div></div>
         <div
           className={"shadowBox " + this.state.visible}
           onClick={() => this.removeShadow()}
@@ -57,21 +76,11 @@ class WorkImgs extends React.Component {
         <div id="workImages" className={styles.imgGrid}>
           {images.map(image => (
             <picture className={styles.workImg}>
-              <source
-                className="lazyLoad"
-                srcSet=""
-                data-info={image.srcWebp}
-                type="image/webp"
-              />
-              <source
-                className="lazyLoad"
-                srcSet=""
-                data-info={image.srcJpg}
-                type="image/jpeg"
-              />
+              <source data-srcset={image.srcWebp} type="image/webp" />
               <img
-                src={image.srcJpg}
-                className={"lazyLoad " + styles.imgBlock}
+                src=""
+                data-src={image.srcJpg}
+                className={styles.imgBlock}
                 alt="Eagle Sports and Awards"
                 onClick={() => this.showShadow(image)}
               />

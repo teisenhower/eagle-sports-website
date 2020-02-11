@@ -9,18 +9,18 @@ class Nav extends React.Component {
     this.state = {
       toggle: ""
     };
-    this.toggle = React.createRef();
+    // this.toggle = React.createRef();
   }
   debounce(func, wait = 25, immediate = false) {
-    var timeout;
+    let timeout;
     return function() {
-      var context = this,
+      const context = this,
         args = arguments;
-      var later = function() {
+      const later = function() {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
-      var callNow = immediate && !timeout;
+      const callNow = immediate && !timeout;
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
       if (callNow) func.apply(context, args);
@@ -28,7 +28,7 @@ class Nav extends React.Component {
   }
 
   navBar(e) {
-    const screenWidth = window.screen.width;
+    // const screenWidth = window.screen.width;
     const nav = document.querySelector("nav");
     const section = document.querySelector("ul");
     const isCollapsed = section.getAttribute("data-collapsed") === "true";
@@ -46,7 +46,7 @@ class Nav extends React.Component {
   scrollNav(location, e) {
     const screenWidth = window.screen.width;
     const loc = document.getElementById(location);
-    const nav = document.querySelector("nav");
+    // const nav = document.querySelector("nav");
     window.scroll({
       behavior: "smooth",
       left: 0,
@@ -54,7 +54,7 @@ class Nav extends React.Component {
     });
     console.log(this);
 
-    if (screenWidth <= 976 && e != "logo") {
+    if (screenWidth <= 976 && e !== "logo") {
       this.handleToggle();
     }
   }
@@ -75,7 +75,7 @@ class Nav extends React.Component {
     }
   }
   open(element) {
-    var navHeight = element.scrollHeight;
+    const navHeight = element.scrollHeight;
     element.style.height = navHeight + "px";
     element.addEventListener("transitionend", function(e) {
       element.removeEventListener("transitionend", arguments.caller);
@@ -84,8 +84,8 @@ class Nav extends React.Component {
     element.setAttribute("data-collapsed", "false");
   }
   close(element) {
-    var navHeight = element.scrollHeight;
-    var elementTransition = element.style.transition;
+    const navHeight = element.scrollHeight;
+    const elementTransition = element.style.transition;
     element.style.transition = "";
     requestAnimationFrame(function() {
       element.style.height = navHeight + "px";
