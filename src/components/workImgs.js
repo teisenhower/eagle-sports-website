@@ -69,7 +69,7 @@ class WorkImgs extends React.Component {
             <img
               src=""
               className={styles.shadowImage}
-              alt="Eagle Sports and Awards"
+              alt="Custom Screen Printed T-Shirt Design"
             />
           </picture>
         </div>
@@ -81,7 +81,7 @@ class WorkImgs extends React.Component {
                 src=""
                 data-src={image.srcJpg}
                 className={styles.imgBlock}
-                alt="Eagle Sports and Awards"
+                alt="Custom Screen Printed T-Shirt Design"
                 onClick={() => this.showShadow(image)}
               />
             </picture>
