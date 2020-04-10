@@ -6,13 +6,13 @@ class WorkImgs extends React.Component {
     super(props);
     this.state = {
       visible: "hidden",
-      src: ""
+      src: "",
     };
-    let onIntersection = entries => {
+    let onIntersection = (entries) => {
       const images = window.document.querySelectorAll("source, img");
       if (entries[0].intersectionRatio > 0) {
         this.observer.unobserve(this.imageRef.current);
-        images.forEach(image => {
+        images.forEach((image) => {
           preloadImage(image);
         });
       }
@@ -21,10 +21,10 @@ class WorkImgs extends React.Component {
     this.observer = new IntersectionObserver(onIntersection, {
       root: null,
       rootMargin: "50px",
-      threshold: 0
+      threshold: 0,
     });
 
-    let preloadImage = image => {
+    let preloadImage = (image) => {
       if (image.dataset && image.dataset.src) {
         image.src = image.dataset.src;
       }
@@ -40,7 +40,7 @@ class WorkImgs extends React.Component {
 
   showShadow(image) {
     this.setState({
-      src: image
+      src: image,
     });
     this.state.visible === "hidden"
       ? this.setState({ visible: "show" })
@@ -51,13 +51,13 @@ class WorkImgs extends React.Component {
       ? this.setState({ visible: "hidden" })
       : this.setState({ visible: "hidden" });
     this.setState({
-      src: ""
+      src: "",
     });
   }
   render() {
     return (
-      <div ref={this.imageRef}>
-        <div></div>
+      <div>
+        <div ref={this.imageRef}></div>
         <div
           className={"shadowBox " + this.state.visible}
           onClick={() => this.removeShadow()}
@@ -74,7 +74,7 @@ class WorkImgs extends React.Component {
           </picture>
         </div>
         <div id="workImages" className={styles.imgGrid}>
-          {images.map(image => (
+          {images.map((image) => (
             <picture className={styles.workImg}>
               <source data-srcset={image.srcWebp} type="image/webp" />
               <img
