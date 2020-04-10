@@ -1,4 +1,4 @@
-![ES Header](https://s3.amazonaws.com/teisenhower.dev-test2/assets/ES_Header.png)
+![ES Header](https://s3.amazonaws.com/teisenhower.dev/readme-assets/ES_Header.png)
 
 ## Eagle Sports and Awards
 
@@ -8,7 +8,7 @@ Eagle Sports and Awards is a Vietnam Veteran owned screen printing, embroidery, 
 
 This site is built using [React](https://reactjs.org/)
 
-![React Logo](https://s3.amazonaws.com/teisenhower.dev-test2/assets/React-icon.png)
+![React Logo](https://s3.amazonaws.com/teisenhower.dev/readme-assets/React-icon.png)
 
 ## Quick Start
 
